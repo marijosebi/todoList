@@ -1,19 +1,36 @@
 /* En este caso el root es una especie de variable donde declaras los colores mas usados */
 :root{
+    --color-primario:#05f17b;
+    --color-secundario:#9be2af;
+    --color-input: #d5f8df;
+    --bg: #fff2eb9d;
+    /* hsla(23, 100%, 96%, 0.541); */
+    --text-size: 1.5rem;
+    /* La medida rem especifica el tamaño de fuente con respecto al padre, en este caso BODY */
+    --color-text: #251e1c;
+
+}
+/* elija el root 
+:root{
     --color-primario:#9dab34;
     --color-secundario:#63b397;
     --color-input: #a2e5d2;
     --bg: #fffab3;
     --text-size: 1.5rem;
-    /* La medida rem especifica el tamaño de fuente con respecto al padre, en este caso BODY */
     --color-text: #2c2321;
 
 }
+*/
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
 
-/* Quecar por que los iconos de boostrap no funcionan */
+}
 
 body{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color:var(--bg);
     /* Recuerda que en el backgraund se puede tener un gradiente var(--bg) */
     height: 100vh;
@@ -22,29 +39,38 @@ body{
     justify-content: center;
 }
 
-.container{
+.contenedor{
 max-width: 80%;
    width: 400px;
    height: 600px;
-   margin: 100px auto;
+   margin: 10px auto;
+   padding: 40px;
    background-color: var(--color-secundario);
    border-radius: 20px;
    }
 
+ .contenedor h1{
+    margin-top: 10px;;
+}
+/* Al agregar el h1 tiene que estar dentro del primer div */
 .encabezdo{
     padding: 10px 0 5px 0;
 
 }
+
 .agregar{
     background-color: var(--color-input);
-    border-radius:15px;
-    width: 80%;
+    border-radius: 15px;
+    /* width: 80%; */
     height: 70px;
     display: flex;
     align-items: center;
     padding: 10px;
     gap: 70px;
+    border: solid var(--bg) ;
+    margin-top: 15px;
 }
+
 .agregar input{
     width: 100%;
     height: 100%;
@@ -75,9 +101,10 @@ max-width: 80%;
 /* SECCION TAREAS  */
 .tareas h2{
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
-.tareas-pendientes{
+.tareas{
     font-size: 25px;
 
 }
@@ -90,7 +117,7 @@ max-width: 80%;
     margin: 5px 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .tareas i:hover{
